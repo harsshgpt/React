@@ -1,13 +1,14 @@
-import { useState } from 'react'
-
-
-
+import Chai from "./Chai"
 
 function App() {
   
 
   return (
-    <h1>Chai aur react  | Harsh Gupta</h1>
+    <>
+    <h1>Hi i am Harsh </h1>
+   
+    <Chai/>
+    </>
   )
 }
 
