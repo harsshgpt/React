@@ -19,12 +19,12 @@ function App() {
  
    <>
    <h1>Chai aur react {counter}</h1>
-   <h2>Counter value : {counter}</h2>
+   <h2 class = "bg-red-950">Counter value : {counter}</h2>
    <button
-   onClick={addValue}>Add Value</button>
+   onClick={addValue}>Count is {counter}</button>
    <br/>
    <hr/>
-   <button onClick={remove}>Remove Value</button>
+   <button onClick={remove} >Remove Value {counter}</button>
    </>
   )
 }
