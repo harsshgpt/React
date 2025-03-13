@@ -5,17 +5,22 @@ import './App.css'
 import Harsh from './components/card'
 
 function App() {
-  const [count, setCount] = useState(0)
-  let myobj = {
-    name:"Harsh",
-    age : 25,
-    class : 7,
+  const [count, setCount] = useState(15)
+  let addvalue = () =>{
+    setCount( count+1)
+    
+  }
+  let removevalue = () => {
+    setCount( count-1)
   }
   return (
     <>
-     <Harsh name = "harsh gupta" detail = {myobj}/>
-     <Harsh/>
-     
+     <h1>Counter program</h1>
+     <h1>{count}</h1>
+     <div class = "buttons">
+     <button onClick={addvalue}>Add Value</button>
+     <button onClick={removevalue}>Remove Value</button>
+     </div>
     </>
   )
 }

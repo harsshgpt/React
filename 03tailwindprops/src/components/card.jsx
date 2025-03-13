@@ -10,7 +10,7 @@ function card(props) {
          className="rounded-t-xl"
        />
        <div className="glass py-4 px-5 relative -top-[3.4rem]  rounded-b-xl z-10">
-         <h1 className="font-bold  font-mono  text-xl ">Hi i am Harsh </h1>
+         <h1 className="font-bold  font-mono  text-xl ">Hi i am {props.name} </h1>
        </div>
      </div>
   )
