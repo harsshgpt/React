@@ -7,7 +7,8 @@ import Harsh from './components/card'
 function App() {
   const [count, setCount] = useState(15)
   let addvalue = () =>{
-    setCount( count+1)
+    setCount(count => count+1)
+
     
   }
   let removevalue = () => {
