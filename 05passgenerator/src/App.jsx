@@ -7,7 +7,7 @@ function App() {
   const [numallowd, setnumallowd] = useState(false) 
   const [charallowd, setcharallowd] = useState(false) 
 
-  const passwordgenerator = () =>{}
+  const passwordGenerator = () =>{}
   return (
   <>
   <h1 className='text-4xl  text-center text-white'>Password Generator</h1>
