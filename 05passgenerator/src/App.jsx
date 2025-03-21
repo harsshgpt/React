@@ -1,4 +1,4 @@
-import { useState,useCallback } from 'react'
+import { useState,useCallback,useEffect } from 'react'
 
 
 function App() {
@@ -8,19 +8,23 @@ function App() {
   const [charallowd, setcharallowd] = useState(false) 
 
   const passwordGenerator = useCallback(() =>{
-    let pass =  ""
+    let pass =""
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     if(numallowd) str+="0123456789"
     if(charallowd) str += "!@#$%^&*(){}~`'"
-    for(let i = 1; i<=array.length;i++){
+    for(let i = 1; i<=length;i++){
       let char = Math.floor(Math.random()*str.length+1)
-      pass = str.charAt(char)
+      pass += str.charAt(char)
     }
 
     setPassword(pass)
   
+    
        
   },[length,numallowd,charallowd,setPassword])
+  useEffect(()=>{passwordGenerator()},[length,numallowd,charallowd,passwordGenerator])
+
+
   return (
   <>
   <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 text-orange-500 bg-gray-700'>
@@ -42,7 +46,9 @@ function App() {
         max={100}
         value={length}
         className='cursor-pointer'
-        onChange={(e) =>{setLength(e.terget.value)}}
+        onChange={(e) => setLength(e.target.value)}
+        
+
         />
         <label > Length:{length}</label>
       </div>
